@@ -1,22 +1,69 @@
 <html>
-    <head>
-        <title>Curso de CSS3 - Essencial</title>
-        <meta charset="utf-8">
 
-        <style>
-            #janela {
-                position:absolute;
-                top:50px;left:50px;
-                width:200px;
-                height:200px;
-                background:blue;
-            }
-        </style>
-    </head>
+<head>
+    <title>Curso de CSS3 - Essencial</title>
+    <meta charset="utf-8">
 
-    <body>
-        <div id="janela">
+    <style>
+        #janela {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(blue, red, yellow);
+            padding: 25px;
+            border: 25px solid navy;
+            margin: 25px;
+        }
+        
+        #janela_2 {
+            position: absolute;
+            top: 50px;
+            left: 400px;
+            width: 200px;
+            height: 200px;
+            background: red;
+            box-shadow: 10px 10px;
+        }
+        
+        #janela_teste {
+            position: absolute;
+            top: 400px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(green 30%, yellow 70%);
+            box-shadow: 5px 10px #888888;
+        }
+        
+        #janela_teste2 {
+            position: absolute;
+            top: 400px;
+            left: 350px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(green, yellow);
+            box-shadow: 10px, 10px, 5px, grey;
+            box-shadow: 5px 10px;
+        }
+    </style>
+</head>
 
-        </div>
-    </body>
+<body>
+    <div id="janela">
+        Olá, mundo!
+    </div>
+
+    <div id="janela_2">
+
+    </div>
+    <div id="janela_teste">
+        <p>The box-shadow property defines the shadow of an element:</p>
+    </div>
+    <div id="janela_teste2">
+
+    </div>
+</body>
+
 </html>
