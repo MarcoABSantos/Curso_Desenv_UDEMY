@@ -1,11 +1,28 @@
 <html>
-    <head>
-        <title>Aulas de Javascript</title>
-        <script>
 
-        </script>
-    </head>
-    <body>
-        
-    </body>
+<head>
+    <title>Aulas de Javascript</title>
+    <script>
+        var produto = new Object();
+        produto.nome = "Caneta";
+        produto.preco = 1.99;
+        produto.cor = "azul";
+        console.log(produto);
+        console.log(produto.nome);
+        console.log(produto.cor);
+        console.log(produto.preco);
+
+        function retornarInfo() {
+            return this.nome;
+        }
+        produto.info = retornarInfo;
+        console.log(produto.info());
+        alert(produto.nome);
+    </script>
+</head>
+
+<body>
+
+</body>
+
 </html>
