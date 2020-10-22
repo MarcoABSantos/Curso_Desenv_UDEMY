@@ -1,28 +1,32 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Curso jQuery Fundamental</title> 
-        
-        <script src="jquery-3.2.1.min.js"></script>
-        <script>
-			$(function(e) {
-				
-			})
-		</script>        
-    </head>
 
-    <body>
-    	
-      
-		<ul>
-        		
-            <li>Curso HTML5 Essencial</li>
-            <li>Curso CSS3 Essencial</li>
-            <li>Curso Javascript Essencial</li>
-            <li>Curso jQuery Fundamental</li>
-        </ul>
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso jQuery Fundamental</title>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(e) {
+            $("li:last").remove(); //remove o ultimo item da lista li
+            $("li.especifico").remove(); //remove os itens da classe "especifico"
+            $("li:first").replaceWith("<li>Curso BootStrap</li>");
+            $("ul").wrapAll("<div style='border:1px solid #CCC'></div>");
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <ul>
+
+        <li class="especifico">Curso HTML5 Essencial</li>
+        <li>Curso CSS3 Essencial</li>
+        <li>Curso Javascript Essencial</li>
+        <li>Curso jQuery Fundamental</li>
+    </ul>
+
+</body>
 
 </html>
