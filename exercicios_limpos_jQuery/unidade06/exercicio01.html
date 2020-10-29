@@ -1,20 +1,41 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Curso jQuery Fundamental</title>
-        
-        <script src="jquery-3.2.1.min.js"></script>
-        <script>
-					
-		</script>        
-    </head>
 
-    <body>
-        <input type="button" id="cursohtml" value="Curso HTML5" />
-        <input type="button" id="cursocss" 	value="Curso CSS3" />
-        
-        
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso jQuery Fundamental</title>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $(function() {
+            $('#cursohtml').click(function() {
+                alert("clicou no botao html");
+            })
+            $('#cursocss').on("click", function() {
+                alert("clicou no botao css");
+            })
+            $('#cursocss').on("mouseover", function() {
+                alert("passou o mouse sobre o botao css");
+            })
+
+            function mostrarMensagem() {
+
+                alert("passou o mouse sobre o botao função única");
+
+                $('#funçãoúnica').off("mouseover", mostrarMensagem);
+
+            }
+            $('#funçãoúnica').on("mouseover", mostrarMensagem);
+        })
+    </script>
+</head>
+
+<body>
+    <input type="button" id="cursohtml" value="Curso HTML5" />
+    <input type="button" id="cursocss" value="Curso CSS3" />
+    <input type="button" id="funçãoúnica" value="função única" />
+
+
+</body>
 
 </html>
