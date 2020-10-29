@@ -1,26 +1,53 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Curso jQuery Fundamental</title>
-        
-        <style>
-			#janela { border:1px solid #666; width:200px; height:200px; margin-top:10px }
-		</style>
-        
-        <script src="jquery-3.2.1.min.js"></script>
-        <script>
 
-	 	</script>        
-    </head>
-    
-    
+<head>
+    <meta charset="UTF-8">
+    <title>Curso jQuery Fundamental</title>
 
-    <body>
-    	<input type="submit" id="botaoazul" 	value="azul">
-        <input type="submit" id="botaovermelho" value="vermelho">
-        <input type="submit" id="botaoverde" 	value="verde">
-        
-        <div id="janela"></div>
-    </body>
+    <style>
+        #janela {
+            border: 1px solid #666;
+            width: 200px;
+            height: 200px;
+            margin-top: 10px
+        }
+    </style>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+        function aplicarCorAzul() {
+            $('#janela').css('background-color', 'blue');
+        }
+
+        function aplicarCorVermelha() {
+            $('#janela').css('background-color', 'red');
+        }
+
+        function aplicarCor(e) {
+            $param = e.data.cor;
+            $('#janela').css('background-color', $param);
+            $('#janela').css('width', e.data.largura);
+        }
+        $(function() {
+            $('#botaoazul').on("click", aplicarCorAzul);
+            $('#botaovermelho').on("click", aplicarCorVermelha);
+            $('#botaoverde').on("click", {
+                cor: 'green',
+                largura: '250px'
+            }, aplicarCor);
+        })
+    </script>
+</head>
+
+
+
+<body>
+    <input type="submit" id="botaoazul" value="azul">
+    <input type="submit" id="botaovermelho" value="vermelho">
+    <input type="submit" id="botaoverde" value="verde">
+
+    <div id="janela"></div>
+</body>
+
 </html>
