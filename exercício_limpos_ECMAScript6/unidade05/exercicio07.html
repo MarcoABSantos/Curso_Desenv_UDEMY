@@ -17,6 +17,18 @@
             
             jogador.escreverHabilidades();
 
+            var objeto = { tipo:"Caneta", cor:"Azul", marca: "Bic", preço:2};
+
+            console.log(objeto.tipo);
+            console.log(objeto.preço);
+
+            var {tipo, cor, tampas} = { tipo:"Caneta", cor:"Azul", marca: "Bic", preço:2,
+            tampas: ["redonda", "quadrada"]};
+            console.log(tipo);
+            console.log(cor);
+            console.log(objeto.marca);
+            console.log(tampas[0]);
+
         </script>
     </head>
     <body>
