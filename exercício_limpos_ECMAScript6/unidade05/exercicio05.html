@@ -8,14 +8,26 @@
                 nome:"Messi",
                 habilidades:["chutar","driblar","correr","fazer gols"],
                 escreverHabilidades: function() {
-                    var _this = this;
                     this.habilidades.forEach(function(skill) {
-                        console.log(_this.nome + " é craque em " + skill);   
+                        console.log(this.nome + " é craque em " + skill);   
+                    }.bind(this));
+                },
+
+                descreverHabilidades() {
+                    this.habilidades.forEach(skill => {
+                        console.log(this.nome + " é craque em " + skill);   
                     });
+                },
+                escreverHabilidades2() {
+                    this.habilidades.forEach(skill => 
+                        console.log(this.nome + " é craque em " + skill)
+                    );
                 }
             }
             
             jogador.escreverHabilidades();
+            jogador.descreverHabilidades();
+            jogador.escreverHabilidades2();
 
         </script>
     </head>
