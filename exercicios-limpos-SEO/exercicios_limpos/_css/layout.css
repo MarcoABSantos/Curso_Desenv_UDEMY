@@ -4,7 +4,7 @@ header {
 	background-color: #1f0c04;
 	height: 95px;
 	width: 100%;
-	background-image: url(imagens/topo_principal.jpg);
+	background-image: url(../_img/diversas/topo_principal.jpg);
 	background-repeat: no-repeat;
 	background-position:top center;
 }
@@ -64,7 +64,7 @@ aside {
 }
 footer {
 	clear:both;
-	background-image: url(imagens/rodape.png);
+	background-image: url(../_img/diversas/rodape.png);
 	background-repeat: no-repeat;
 	margin: 0px auto;
 	height: 300px;
